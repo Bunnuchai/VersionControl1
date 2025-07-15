@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="q-pa-md" style="max-width: 400px">
 
     <q-form
@@ -10,7 +9,7 @@
       <q-input
         filled
         v-model="name"
-        label="ชื่อ-นามสกุล *"
+        label="Your name *"
         hint="Name and surname"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
@@ -40,65 +39,10 @@
 </template>
 
 <script>
-import { useQuasar } from 'quasar'
-import { ref } from 'vue'
-
 export default {
-  setup () {
-    const $q = useQuasar()
-
-    const name = ref(null)
-    const age = ref(null)
-    const accept = ref(false)
-
-    return {
-      name,
-      age,
-      accept,
-
-      onSubmit () {
-        if (accept.value !== true) {
-          $q.notify({
-            color: 'red-5',
-            textColor: 'white',
-            icon: 'warning',
-            message: 'You need to accept the license and terms first'
-          })
-        }
-        else {
-          $q.notify({
-            color: 'green-4',
-            textColor: 'white',
-            icon: 'cloud_done',
-            message: 'Submitted'
-          })
-        }
-      },
-
-      onReset () {
-        name.value = null
-        age.value = null
-        accept.value = false
-      }
-    }
-  }
+  name: 'IndexPage'
 }
-=======
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-     <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
-</template>
-
-<script setup>
-//
->>>>>>> f6605a9000bd0111ca35b7ab7280bdb970923c16
 </script>
+
+<style scoped>
+</style>
