@@ -1,6 +1,5 @@
 <template>
   <div class="q-pa-md" style="max-width: 400px">
-
     <q-form
       @submit="onSubmit"
       @reset="onReset"
@@ -9,7 +8,7 @@
       <q-input
         filled
         v-model="name"
-        label="Your name *"
+        label="ชื่อ-นามสกุล *"
         hint="Name and surname"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
@@ -30,11 +29,10 @@
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
-        <q-btn label="Submit" type="submit" color="primary"/>
+        <q-btn label="Submit" type="submit" color="primary" />
         <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
-
   </div>
 </template>
 
@@ -63,8 +61,7 @@ export default {
             icon: 'warning',
             message: 'You need to accept the license and terms first'
           })
-        }
-        else {
+        } else {
           $q.notify({
             color: 'green-4',
             textColor: 'white',

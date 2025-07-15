@@ -87,8 +87,17 @@ export default defineConfig((ctx) => {
       // directives: [],
 
       // Quasar plugins
+<<<<<<< HEAD
       plugins: ['Notify']
 
+=======
+<<<<<<< HEAD
+      plugins: ['Notify']
+      
+=======
+      plugins: []
+>>>>>>> f6605a9000bd0111ca35b7ab7280bdb970923c16
+>>>>>>> 30b530931558abe5cc047ca2416e379687f6485b
     },
 
     // animations: 'all', // --- includes all animations
